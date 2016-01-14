@@ -1,3 +1,6 @@
+#!/usr/bin/env ruby
+
+### $chmod 755 main.rb in terminal in the folder containing main.rb
 require 'nokogiri'
 require 'open-uri'
 require 'colorize'
@@ -41,6 +44,9 @@ class Main
       @post = Scraper.get_post_info(input)
     rescue NoURLError
       puts "No URL specified."
+      exit
+    rescue 
+      puts "No such URL."
       exit
     end
   end
