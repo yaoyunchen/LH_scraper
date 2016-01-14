@@ -45,7 +45,7 @@ class Main
     rescue NoURLError
       puts "No URL specified."
       exit
-    rescue 
+    rescue Errno::ENOENT
       puts "No such URL."
       exit
     end
